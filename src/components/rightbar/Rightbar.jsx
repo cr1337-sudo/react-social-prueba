@@ -2,15 +2,15 @@ import "./rightbar.css";
 import { Users } from "../../Data";
 import Online from "../online/Online";
 
-export default function Rightbar() {
+export default function Rightbar({user}) {
+  const PF = process.env.REACT_APP_PUBLIC_FOLDER;
   return (
     <div className="rightbar">
       <div className="rightbarWrapper">
         <div className="birthdayContainer">
           <img
-            src="/assets/gift.png"
+            src={`${PF}gift.png`}
             alt=""
-            srcset=""
             className="birthdayImg"
           />
           <span className="birthdayText">
